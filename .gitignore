@@ -1,0 +1,4 @@
+__pychache__/
+*.pyc
+*.scss.css
+.vscode/
