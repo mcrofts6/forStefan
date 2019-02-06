@@ -1,0 +1,17 @@
+<%inherit file="app_base.htm" />
+
+<%block name="site_center">
+
+<center>Let us send you a message!</center><br>
+    <form  method="POST"> 
+        <p>Name: <input type="text" name="yourname" /></p>
+        <p>Email: <input type="email" name="youremail" /></p>
+        <p>Happy?
+                <select name="happy">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+        </p>
+        <p><input type="submit" /></p>
+    </form>
+</%block>

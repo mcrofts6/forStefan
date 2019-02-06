@@ -1,0 +1,26 @@
+main {
+  text-align: center;
+}
+
+h4.utc-time {
+  color: #3771A1;
+}
+
+.server-time {
+  font-size: 2em;
+  color: red;
+}
+
+#site_left {
+  background-color: lightseagreen;
+}
+
+#site_center {
+  background-color: white;
+}
+
+#site_right {
+  background-color: lightskyblue;
+}
+
+/*# sourceMappingURL=index.scss.css.map */
