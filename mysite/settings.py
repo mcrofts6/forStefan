@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_mako_plus', 
     'account',         # DMP routing and Mako templating
     'homepage',                     # Mako
+    'catalog',
     ]
 
 MIDDLEWARE = [
