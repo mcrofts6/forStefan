@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'account.User'
 
 # Application definition
 
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',      # uses a cookie to keep the login between vists
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_mako_plus',             # DMP routing and Mako templating
+    'django_mako_plus', 
+    'account',         # DMP routing and Mako templating
     'homepage',                     # Mako
     ]
 
@@ -84,8 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'fomo',
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'postgres',
+        'PASSWORD': 'princess96',
+        'HOST': 'localhost',
+        'PORT': '5432', #5432
         
     }
 }
@@ -121,7 +125,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

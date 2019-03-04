@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1549423012.1463206
+_modified_time = 1551108056.2527437
 _enable_loop = True
 _template_filename = 'C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm'
 _template_uri = 'base.htm'
@@ -21,21 +21,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def title():
-            return render_title(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        request = context.get('request', UNDEFINED)
         def site_right():
             return render_site_right(context._locals(__M_locals))
+        def title():
+            return render_title(context._locals(__M_locals))
+        request = context.get('request', UNDEFINED)
+        def menu_items():
+            return render_menu_items(context._locals(__M_locals))
+        def site_center():
+            return render_site_center(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def header():
             return render_header(context._locals(__M_locals))
         def site_left():
             return render_site_left(context._locals(__M_locals))
-        def site_center():
-            return render_site_center(context._locals(__M_locals))
-        def menu_items():
-            return render_menu_items(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n<!DOCTYPE html>\r\n<html>\r\n    <meta charset="UTF-8">\r\n    <head>\r\n\r\n')
         __M_writer('        <link rel="icon" href="')
@@ -76,7 +76,7 @@ def render_body(context,**pageargs):
             context['self'].site_right(**pageargs)
         
 
-        __M_writer('\r\n            </div>\r\n        </main>\r\n\r\n        <footer class="center">\r\n            &copy Copyright: ')
+        __M_writer('\r\n            </div>\r\n        </main>\r\n\r\n        <footer class="center">\r\n            &copy; Copyright: ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( datetime.datetime.today().year ))
         __M_writer('\r\n        </footer>\r\n\r\n    </body>\r\n</html>\r\n')
         return ''
@@ -98,13 +98,13 @@ def render_title(context,**pageargs):
 def render_header(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        def menu_items():
+            return render_menu_items(context)
         self = context.get('self', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def header():
             return render_header(context)
         request = context.get('request', UNDEFINED)
-        def menu_items():
-            return render_menu_items(context)
         __M_writer = context.writer()
         __M_writer('\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -123,10 +123,10 @@ def render_header(context,**pageargs):
 def render_menu_items(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        self = context.get('self', UNDEFINED)
-        request = context.get('request', UNDEFINED)
         def menu_items():
             return render_menu_items(context)
+        self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n                                <li class="nav-item ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page == 'index' else '' ))
@@ -134,7 +134,9 @@ def render_menu_items(context,**pageargs):
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page == 'about' else '' ))
         __M_writer('">\r\n                                    <a class="nav-link " href="#">About</a>\r\n                                </li>\r\n                                <li class="nav-item ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page == 'contact' else '' ))
-        __M_writer('">\r\n                                    <a class="nav-link " href="#">Contact</a>\r\n                                </li>\r\n                                <li class="nav-item dropdown">\r\n                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\r\n                                        User\r\n                                    </a>\r\n                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">\r\n                                        <a class="dropdown-item" href="#">Account</a>\r\n                                        <a class="dropdown-item" href="#">Log Out</a>\r\n                                    </div>\r\n                                </li>\r\n                            ')
+        __M_writer('">\r\n                                    <a class="nav-link " href="#">Contact</a>\r\n                                </li>\r\n                                    <li class="nav-item dropdown">\r\n                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\r\n                                            User\r\n                                        </a>\r\n                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">\r\n                                            <a class="dropdown-item" href="#">Account</a>\r\n                                            <a class="dropdown-item" href="/account/logout">Log Out</a>\r\n                                        </div>\r\n                                    </li>\r\n                                    <li class="nav-item ')
+        __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page == 'index' else '' ))
+        __M_writer('">\r\n                                        <a class="nav-link" href="/account/login">Log In<span class="sr-only">(current)</span></a>\r\n                                    </li> \r\n                            ')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -178,6 +180,6 @@ def render_site_right(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 2, "20": 0, "40": 2, "41": 9, "42": 9, "43": 9, "48": 11, "49": 14, "50": 14, "51": 14, "52": 19, "53": 19, "54": 19, "55": 20, "56": 20, "57": 23, "58": 23, "59": 23, "64": 65, "69": 71, "74": 75, "79": 79, "80": 84, "81": 84, "87": 11, "98": 31, "109": 31, "110": 32, "111": 32, "112": 35, "117": 61, "123": 42, "131": 42, "132": 43, "133": 43, "134": 46, "135": 46, "136": 49, "137": 49, "143": 69, "149": 69, "155": 74, "161": 74, "167": 78, "173": 78, "179": 173}}
+{"filename": "C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 2, "20": 0, "40": 2, "41": 9, "42": 9, "43": 9, "48": 11, "49": 14, "50": 14, "51": 14, "52": 19, "53": 19, "54": 19, "55": 20, "56": 20, "57": 23, "58": 23, "59": 23, "64": 68, "69": 74, "74": 78, "79": 82, "80": 87, "81": 87, "87": 11, "98": 31, "109": 31, "110": 32, "111": 32, "112": 35, "117": 64, "123": 42, "131": 42, "132": 43, "133": 43, "134": 46, "135": 46, "136": 49, "137": 49, "138": 61, "139": 61, "145": 72, "151": 72, "157": 77, "163": 77, "169": 81, "175": 81, "181": 175}}
 __M_END_METADATA
 """

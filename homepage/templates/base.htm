@@ -49,15 +49,18 @@
                                 <li class="nav-item ${ 'active' if request.dmp.page == 'contact' else '' }">
                                     <a class="nav-link " href="#">Contact</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        User
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Account</a>
-                                        <a class="dropdown-item" href="#">Log Out</a>
-                                    </div>
-                                </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            User
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Account</a>
+                                            <a class="dropdown-item" href="/account/logout">Log Out</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ${ 'active' if request.dmp.page == 'index' else '' }">
+                                        <a class="nav-link" href="/account/login">Log In<span class="sr-only">(current)</span></a>
+                                    </li> 
                             </%block>
                         </ul>
                     </div>
@@ -81,7 +84,7 @@
         </main>
 
         <footer class="center">
-            &copy Copyright: ${ datetime.datetime.today().year }
+            &copy; Copyright: ${ datetime.datetime.today().year }
         </footer>
 
     </body>
