@@ -3,16 +3,16 @@ from datetime import datetime
 
 # Create your models here.
 class Category(models.Model):
-    last_modified = models.DatetimeField(auto_now=True)
+    last_modified = models.DateTimeField(auto_now=True)
     name = models.TextField(null=False)
 
-class Product(model.Model):
+class Product(models.Model):
     STATUS_CHOICES = (
         ('A','Active'),
         ('I', 'Inactive'),
     )
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=False)
-    last_modified = models.DatetimeField(auto_now=True)
+    last_modified = models.DateTimeField(auto_now=True)
     status = models.TextField(db_index=True, choices=STATUS_CHOICES, default='A', null=False)
     name = models.TextField(null=False)
     description = models.TextField(null=False)
@@ -35,8 +35,11 @@ class Product(model.Model):
 
 class ProductImage(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
-    filename = models.TextField()
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='images')
+    filename = models.TextField(null=False)
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='images', null=False)
 
     def image_url(self):
-    return settings.STATIC_URL + "cataog/media/products/" + self.filename
+        self.url = settings.STATIC_URL + "cataog/media/products/" + self.filename
+        if self.filename is None:
+            self.url = settings.STATIC_URL + "cataog/media/products/notfound.jpg"
+        return self.url

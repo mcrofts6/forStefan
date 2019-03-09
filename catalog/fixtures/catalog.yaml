@@ -1,0 +1,524 @@
+#CATEGORIES###############################################################        
+-   model: catalog.Category
+    pk: 1
+    fields:
+        last_modified: 2019-02-18 20:31:55.512396
+        name: piano
+
+-   model: catalog.Category
+    pk: 2
+    fields:
+        last_modified: 2019-02-18 20:31:55.512396
+        name: guitar
+
+-   model: catalog.Category
+    pk: 3
+    fields:
+        last_modified: 2019-02-18 20:31:55.512396
+        name: bagpipes
+        
+#ACTIVE PRODUCTS###############################################################        
+-   model: catalog.Product
+    pk: 1
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Large Piano
+        description: It's a big piano.
+        price: 10000.00
+        quantity: 10
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 2
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Small Piano
+        description: It's a little piano.
+        price: 5000.00
+        quantity: 10
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 3
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Taylor
+        description: You too can be Taylor Swift.
+        price: 4000.00
+        quantity: 10
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 4
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Telecaster
+        description: Be prepared to shred.
+        price: 500.00
+        quantity: 15
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 5
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Scottish Classical
+        description: Classic scottish bagpipes.
+        price: 100.00
+        quantity: 5
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 6
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Scottish Rock Pipes
+        description: Used by AC/DC.
+        price: 1000000.00
+        quantity: 1
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 7
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Keyboard
+        description: Electric keyboard.
+        price: 3000.00
+        quantity: 15
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 8
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Floor Piano
+        description: Like the piano in the movie Big.
+        price: 7000.00
+        quantity: 3
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 9
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Grand Piano
+        description: The grandest of all the pianos.  All hail the piano king.
+        price: 15000.00
+        quantity: 20
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 10
+    fields:       
+        category: 1
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Harpsicord
+        description: Just the old fashioned version of piano.
+        price: 21000.00
+        quantity: 2
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 11
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Electric Hashaloo
+        description: The ultimate electric guitar.
+        price: 7000.00
+        quantity: 7
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 12
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Gibson    
+        description: Cherry red.  Owned by Jake Kisnack.
+        price: 800.00
+        quantity: 9
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 13
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Les Paul
+        description: As opposed to more Paul.
+        price: 500.00
+        quantity: 4
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 14
+    fields:       
+        category: 2
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Eterna
+        description: Will never fail you.  Everlasting.
+        price: 400.00
+        quantity: 12
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+        -   model: catalog.Product
+    pk: 15
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Scottish Smallpipes
+        description: Like the classic pipes, but smaller.
+        price: 400.00
+        quantity: 6
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 16
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Mizwad
+        description: The bagpipes of wizards.
+        price: 10000.00
+        quantity: 1
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 17
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Pastoral Pipes
+        description: Appropriate for all church events.
+        price: 1500.00
+        quantity: 3
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+-   model: catalog.Product
+    pk: 18
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: active
+        name: Irish Bagpipes
+        description: They're grand, so they are.
+        price: 18000.00
+        quantity: 2
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+
+
+#INACTIVE PRODUCTS###############################################################        
+-   model: catalog.Product
+    pk: 19
+    fields:       
+        category: 3
+        last_modified: 2019-02-18 20:31:55.512396
+        status: inactive
+        name: English Classic Pipes
+        description: Used by the beatles if ever they made scottish music.
+        price: 5000.00
+        quantity: 1
+        reorder_trigger: 1
+        reorder_quantity: 2
+
+
+#PRODUCT IMAGES###################################################################
+-   model: catalog.Product
+    pk: 1
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: nail_clippers.jpg
+        product: 1
+
+-   model: catalog.Product
+    pk: 2
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: piano.jpg
+        product: 1
+
+-   model: catalog.Product
+    pk: 3
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: speaker.jpg
+        product: 2
+
+-   model: catalog.Product
+    pk: 4
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: radio.jpg
+        product: 2
+
+-   model: catalog.Product
+    pk: 5
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: thermostat.jpg
+        product: 3
+
+-   model: catalog.Product
+    pk: 6
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: rug.jpg
+        product: 3
+
+-   model: catalog.Product
+    pk: 7
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: sun_glasses.jpg
+        product: 4
+
+-   model: catalog.Product
+    pk: 8
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: milk.jpg
+        product: 4
+
+-   model: catalog.Product
+    pk: 9
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: lip_gloss.jpg
+        product: 5
+
+-   model: catalog.Product
+    pk: 10
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: lamp.jpg
+        product: 5
+
+-   model: catalog.Product
+    pk: 11
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: outlet.jpg
+        product: 6
+
+-   model: catalog.Product
+    pk: 12
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: lotion.jpg
+        product: 6
+
+-   model: catalog.Product
+    pk: 13
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: glass.jpg
+        product: 7
+
+-   model: catalog.Product
+    pk: 14
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: hair_tie.jpg
+        product: 7
+
+-   model: catalog.Product
+    pk: 15
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: ipod.jpg
+        product: 9
+
+-   model: catalog.Product
+    pk: 16
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: fork.jpg
+        product: 9
+
+-   model: catalog.Product
+    pk: 17
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: flowers.jpg
+        product: 10
+
+-   model: catalog.Product
+    pk: 18
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: ice_cube_tray.jpg
+        product: 10
+
+-   model: catalog.Product
+    pk: 19
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: computer.jpg
+        product: 11
+
+-   model: catalog.Product
+    pk: 19
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: fake_flowers.jpg
+        product: 11
+
+-   model: catalog.Product
+    pk: 20
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: chocolate.jpg
+        product: 12
+
+-   model: catalog.Product
+    pk: 21
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: cork.jpg
+        product: 12
+
+    -   model: catalog.Product
+    pk: 22
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: drawer.jpg
+        product: 13
+
+-   model: catalog.Product
+    pk: 23
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: clock.jpg
+        product: 13
+
+-   model: catalog.Product
+    pk: 24
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: bread.jpg
+        product: 14
+
+-   model: catalog.Product
+    pk: 25
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: camera.jpg
+        product: 14
+
+-   model: catalog.Product
+    pk: 26
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: bottle_cap.jpg
+        product: 15
+
+-   model: catalog.Product
+    pk: 27
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: balloon.jpg
+        product: 15
+
+-   model: catalog.Product
+    pk: 28
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: bed.jpg
+        product: 16
+
+-   model: catalog.Product
+    pk: 29
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: chair.jpg
+        product: 16
+
+-   model: catalog.Product
+    pk: 30
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: apple.jpg
+        product: 17
+
+-   model: catalog.Product
+    pk: 31
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: drill_press.jpg
+        product: 17
+
+-   model: catalog.Product
+    pk: 32
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: glow_stick.jpg
+        product: 18
+
+-   model: catalog.Product
+    pk: 33
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: desk.jpg
+        product: 18
+
+-   model: catalog.Product
+    pk: 34
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: earser.jpg
+        product: 19
+
+-   model: catalog.Product
+    pk: 35
+    fields:       
+        last_modified: 2019-02-18 20:31:55.512396
+        filename: wagon.jpg
+        product: 19
+

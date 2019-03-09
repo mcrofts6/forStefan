@@ -1,8 +1,19 @@
-<%inherit file="base.htm" />
+<%inherit file="app_base.htm" />
 
 <%block name="content">
     <div class="content">
-        <h3>Congratulations -- you've successfully created a new DMP app!</h3>
-        <h4 class="utc-time">Current time in UTC: ${ utc_time }</h4>
+        <h1 class="text-center">${ 'Products' if category is None else category.name }</h1>
+        <div id="catalog">
+            %for product in products:
+                <span class="product-container" data-product-id="${ product.id }"></span>
+            %endfor
+        </div>
+
+        <div id="paginator" class="text-right">
+                <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None}">Previous</a>
+                <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None}">Next Page</a>
+            </div>
     </div>
 </%block>
+
+
