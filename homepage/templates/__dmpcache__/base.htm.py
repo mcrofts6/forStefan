@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1551108056.2527437
+_modified_time = 1552966009.5635045
 _enable_loop = True
 _template_filename = 'C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm'
 _template_uri = 'base.htm'
@@ -21,21 +21,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
-        def site_right():
-            return render_site_right(context._locals(__M_locals))
-        def title():
-            return render_title(context._locals(__M_locals))
-        request = context.get('request', UNDEFINED)
-        def menu_items():
-            return render_menu_items(context._locals(__M_locals))
         def site_center():
             return render_site_center(context._locals(__M_locals))
+        def site_right():
+            return render_site_right(context._locals(__M_locals))
+        def site_left():
+            return render_site_left(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def header():
             return render_header(context._locals(__M_locals))
-        def site_left():
-            return render_site_left(context._locals(__M_locals))
+        def title():
+            return render_title(context._locals(__M_locals))
+        def menu_items():
+            return render_menu_items(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\r\n<!DOCTYPE html>\r\n<html>\r\n    <meta charset="UTF-8">\r\n    <head>\r\n\r\n')
         __M_writer('        <link rel="icon" href="')
@@ -48,7 +48,7 @@ def render_body(context,**pageargs):
         __M_writer('</title>\r\n\r\n')
         __M_writer('        <script src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
-        __M_writer('homepage/media/jquery-3.3.1.js"></script>\r\n\r\n        <script src="django_mako_plus/dmp-common.min.js"></script>\r\n\r\n')
+        __M_writer('homepage/media/jquery-3.3.1.js"></script>\r\n\r\n        <link rel="stylesheet" href="catalog/styles/product.tile.scss"></link>\r\n\r\n        <script src="/django_mako_plus/dmp-common.min.js"></script>\r\n\r\n')
         __M_writer('        <script src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
         __M_writer('homepage/media/bootstrap-4.2.1-dist/js/bootstrap.js"></script>\r\n        <link rel="stylesheet" href="')
@@ -98,13 +98,13 @@ def render_title(context,**pageargs):
 def render_header(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        def header():
+            return render_header(context)
         def menu_items():
             return render_menu_items(context)
         self = context.get('self', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        def header():
-            return render_header(context)
         request = context.get('request', UNDEFINED)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n                <img src="')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( STATIC_URL ))
@@ -123,10 +123,10 @@ def render_header(context,**pageargs):
 def render_menu_items(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        def menu_items():
-            return render_menu_items(context)
         self = context.get('self', UNDEFINED)
         request = context.get('request', UNDEFINED)
+        def menu_items():
+            return render_menu_items(context)
         __M_writer = context.writer()
         __M_writer('\r\n                                <li class="nav-item ')
         __M_writer(django_mako_plus.ExpressionPostProcessor(self)( 'active' if request.dmp.page == 'index' else '' ))
@@ -180,6 +180,6 @@ def render_site_right(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 2, "20": 0, "40": 2, "41": 9, "42": 9, "43": 9, "48": 11, "49": 14, "50": 14, "51": 14, "52": 19, "53": 19, "54": 19, "55": 20, "56": 20, "57": 23, "58": 23, "59": 23, "64": 68, "69": 74, "74": 78, "79": 82, "80": 87, "81": 87, "87": 11, "98": 31, "109": 31, "110": 32, "111": 32, "112": 35, "117": 64, "123": 42, "131": 42, "132": 43, "133": 43, "134": 46, "135": 46, "136": 49, "137": 49, "138": 61, "139": 61, "145": 72, "151": 72, "157": 77, "163": 77, "169": 81, "175": 81, "181": 175}}
+{"filename": "C:/Users/Madisyn Crofts/mysite/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"18": 2, "20": 0, "40": 2, "41": 9, "42": 9, "43": 9, "48": 11, "49": 14, "50": 14, "51": 14, "52": 21, "53": 21, "54": 21, "55": 22, "56": 22, "57": 25, "58": 25, "59": 25, "64": 70, "69": 76, "74": 80, "79": 84, "80": 89, "81": 89, "87": 11, "98": 33, "109": 33, "110": 34, "111": 34, "112": 37, "117": 66, "123": 44, "131": 44, "132": 45, "133": 45, "134": 48, "135": 48, "136": 51, "137": 51, "138": 63, "139": 63, "145": 74, "151": 74, "157": 79, "163": 79, "169": 83, "175": 83, "181": 175}}
 __M_END_METADATA
 """

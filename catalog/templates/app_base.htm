@@ -1,0 +1,17 @@
+<%inherit file="/homepage/templates/base.htm" />
+<%! from catalog import models as cmod %>
+
+<%block name="site_left">
+    <div>
+        <ul class="ul">
+            %for category in cmod.Category.objects.all():
+            <li>
+                <a class="white" href="/catalog/index/${category.id}">${category.name}</a>
+            </li>
+            %endfor
+            <li>
+                <a class="white" href="/catalog/index">All Products</a>
+            </li>
+        </ul>
+    </div>
+</%block>

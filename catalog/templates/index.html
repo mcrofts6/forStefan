@@ -1,19 +1,22 @@
 <%inherit file="app_base.htm" />
 
-<%block name="content">
-    <div class="content">
-        <h1 class="text-center">${ 'Products' if category is None else category.name }</h1>
-        <div id="catalog">
-            %for product in products:
-                <span class="product-container" data-product-id="${ product.id }"></span>
-            %endfor
-        </div>
-
-        <div id="paginator" class="text-right">
-                <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None}">Previous</a>
-                <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None}">Next Page</a>
-            </div>
+<%block name="site_center">
+    <h1 class="text-center">${ 'Products' if category is None else category.name }</h1>
+    <div id="catalog">
+        %for product in products:
+            <span class="product-container" data-product-id="${ product.id }">
+            </span>
+        %endfor
     </div>
-</%block>
 
+    <div id="paginator" class="text-right">
+            %if page <= numpages:
+            <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None else 0}/${ 1 if page == 1 else page - 1 }">Previous</a>
+        %endif
+        %if page < 5:
+            <a class="btn btn-secondary" href="/catalog/index/${ category.id if category is not None else 0}/${ 2 if page == 1  else page + 1  }">Next</a>
+        %endif
+</div>
+</%block>                 
+            
 

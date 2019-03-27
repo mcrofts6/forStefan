@@ -1,4 +1,13 @@
-<div>
-    <div><img src="...${ product.image_url() }"/></div>
-    <div>${ product.name }</div>
-</div>
+<%inherit file="/homepage/templates/base_ajax.htm" />
+
+
+<%block name="content">
+<a href="/catalog/product/${ product.id }">
+
+    <div class="text-center, product-tile">
+        <div><img src="${ product.image_url() }" class="product-image" /></div>
+        <div class="product-name">Title: ${ product.name }</div>
+        <div class="product-price">Price: ${ product.price }</div>
+    </div>
+</a>
+</%block>

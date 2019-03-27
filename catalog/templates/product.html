@@ -1,0 +1,27 @@
+<%inherit file="/catalog/templates/base.htm" />
+
+<%block name="site_center">
+    <h1 class="text-center">${ 'Product' if product is None else product.name }</h1>
+    <div id="catalog">
+            <span class="product-tile, text-center" >
+                <div><img src="${ product.image_url() }" /></div>
+                <div>Name: ${ product.name }</div>
+                <div>Description: ${ product.description }</div>
+                <div>Price: ${ product.price }</div>
+                <div>Quantity: ${ product.quantity }</div>
+                <div>Reorder Trigger: ${ product.reorder_trigger }</div>
+                <div>Reorder Quantity: ${ product.reorder_quantity }</div>
+            </span>
+    </div>
+    <div>
+        %for url in product.images_urls():
+            <a><img src="${ url }" class="img-thumbnail, thumbnail"/></a><br><br>
+        %endfor
+    </div>
+    <div>
+        <form  method="POST"> 
+            <p>Quantity: <input type="text" name="yourquantity" /></p>
+            <p><input type="submit" value="Buy Now"/></p>
+        </form>
+        </div>
+</%block>

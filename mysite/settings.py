@@ -72,7 +72,9 @@ TEMPLATES = [
                   'enabled': DEBUG, },   
                 { 'provider': 'django_mako_plus.CssLinkProvider',
                   'filepath': lambda provider: os.path.join(provider.app_config.name, 'styles', provider.template_name + '.scss.css'),
-                 },      
+                 },
+                { 'provider': 'django_mako_plus.CssLinkProvider' },    # generates links for app/styles/template.css
+                { 'provider': 'django_mako_plus.JsLinkProvider' }, 
             ],        },
     },
 ]
@@ -164,3 +166,7 @@ LOGGING = {
         },
     },
 }
+
+STRIPE_SECRET_KEY = 'sk_test_nWqMt8tkobS94iD1qLqJeZOH00dwkWdi9v'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_H0ozfmnrKET4P0dz7mf3sycI00qUZJNyYr'
+stripe.api._key = STRIPE_SECRET_KEY
